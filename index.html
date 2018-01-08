@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EFE官方网站</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link rel="stylesheet" type="text/css" href="templets/efedata/style/css.css">
+<link rel="stylesheet" type="text/css" href="/templets/efedata/style/reset.css">
+<script type="text/javascript" src="/templets/efedata/js/jquery.js"></script>
+<script type="text/javascript" src="/templets/efedata/js/jquery.SuperSlide.js"></script>
+<link rel="alternate" media="only screen and(max-width: 640px)" href="http://holland.efe.com.cn/m/" >
+<meta http-equiv="mobile-agent" content="format=html5; url=http://holland.efe.com.cn/m/">
+<script src="/js/uaredirect.js " type="text/javascript"></script>
+<script type="text/javascript">uaredirect("http://holland.efe.com.cn/m/");</script>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script> 
+<script language="javascript" type="text/javascript"> 
+    function CheckLogin(){  
+      var taget_obj = document.getElementById('_userlogin');  
+      myajax = new DedeAjax(taget_obj,false,false,'','','');  
+      myajax.SendGet2("/member/ajax_loginsta.php");  
+      DedeXHTTP = null;  
+    }  
+</script>
+</head>
+<body>
+<div class="topbar">
+<div class="bar_area">
+<div class="login_L" id="_userlogin">
+<a title="登录" href="/member/login.php">[Login]</a> <a href="/member/index_do.php?fmdo=user&dopost=regnew">[Registered]</a>
+<script 
+language="javascript" 
+type="text/javascript">CheckLogin();</script>
+</div>
+<div class="login_R"><a href="/member/shops_orders.php">Cart(2)</a> <a href="">HELP</a></div>
+</div>   
+</div>
+<div class="clear"></div>
+<!---------------登录头部-----------------*-->
+<div class="header" id="gotop">
+    <div class="logo"><a href="/"><img src="/templets/efedata/images/logo0.png" width="205" height="75"></a></div>
+        <div class="menu radius nave">
+            <ul class="nav">
+                <li><a href="/">HOME</a></li>
+                <li>
+                    <a href="/allpro/">COLLECTION</a>
+                    <ul>
+                        <li>
+                            <a href="/tr90/">TR90</a>
+                            <ul>
+                                <li><a href="/tr90/male/">Male</a></li>
+                                <li><a href="/tr90/female/">Female</a></li>
+                                <li><a href="/tr90/unisex/">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/acetate/">Acetate</a>
+                            <ul>
+                                <li><a href="/acetate/male/">Male</a></li>
+                                <li><a href="/acetate/female/">Female</a></li>
+                                <li><a href="/acetate/unisex/">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/metal/">Metal</a>
+                            <ul>
+                                <li><a href="/metal/male/">Male</a></li>
+                                <li><a href="/metal/female/">Female</a></li>
+                                <li><a href="/metal/unisex/">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/titanium/">Titanium</a>
+                            <ul>
+                                <li><a href="/titanium/male/">Male</a></li>
+                                <li><a href="/titanium/female/">Female</a></li>
+                                <li><a href="/titanium/unisex/">Unisex</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/others/">Others</a>
+                            <!--<ul>
+                                <li><a href="#">Male</a></li>
+                                <li><a href="#">Female</a></li>
+                                <li><a href="#">Unisex</a></li>
+                            </ul>-->
+                        </li>
+                        </ul>
+                <li>
+                    <a href="/news/">NEWS</a>
+                    
+                </li>
+                <li>
+                    <a href="/member/shops_orders.php">MY ORDER</a>
+     
+                </li>
+                <li>
+                    <a href="/about/">ABOUT US</a>
+                   
+                 <li>
+                    <li>
+                    <a href="/contact/">CONTACT US</a>
+                   
+                 <li>
+            </ul>
+        </div>
+<div class="search">
+<form action="/plus/search.php" method="get" >
+<input name="q" type="text" class="search-form" value="search...." >
+<input type="submit" class="smit" value="" style="border:none;">
+</form>
+</div>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+<div class="index_focus">
+
+    <a href="javascript:;" class="index_focus_pre" title="上一张">上一张</a>
+    <a href="javascript:;" class="index_focus_next" title="下一张">下一张</a>
+    
+    <div class="bd">
+        <ul>
+            <li>
+                <a href="#" class="pic">
+                    <img class="pic" src="/templets/efedata/images/banner022.jpg" width="100%"  alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="pic">
+           
+                    <img class="pic" src="/templets/efedata/images/banner011.jpg" width="100%"  alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="slide_nav">
+        <a href="javascript:;">●</a>
+        <a href="javascript:;">●</a>
+    </div>
+    
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    $(".index_focus").hover(function(){
+        $(this).find(".index_focus_pre,.index_focus_next").stop(true, true).fadeTo("show", 1)
+    },function(){
+        $(this).find(".index_focus_pre,.index_focus_next").fadeOut()
+    });
+    
+    $(".index_focus").slide({
+        titCell: ".slide_nav a ",
+        mainCell: ".bd ul",
+        //delayTime: 500,
+       //interTime: 3500,
+        prevCell:".index_focus_pre",
+        nextCell:".index_focus_next",
+        effect: "fold",
+        autoPlay: true,
+        trigger: "click",
+        startFun:function(i){
+            $(".index_focus_info").eq(i).find("h3").css("display","block").fadeTo(1000,1);
+            $(".index_focus_info").eq(i).find(".text").css("display","block").fadeTo(1000,1);
+        }
+    });
+
+});
+</script>
+
+<div class="clear"></div><!--/top结束/-->
+<!--首页第一部分-->
+<div class="big_cont_txt">
+<div class="border1_styl"></div>
+<div class="clear"></div>
+<div class="bar_posi">
+<div class="public_bar">About us</div>
+</div>
+<div class="index_bg04">
+<div class="index_con">
+<div class="index_text1">
+<p><em>S</em>hanghai EFE Eyewear Corp Ltd. founded in 2008, the headquarter located in the fashion capital, Shanghai.</p>
+<p>EFE operation center is over 6000 square meters, which is one of the biggest center in the optical industry.</p>
+<p>EFE is the first eyewear enterprise listed on Shanghai Stock Exchange since 2015 .</p>
+<p>It is a fashion brand specializing in good quality eyewear products with very attractive prices.</p>
+<p>Rapid updating new styles to fulfill the needs of different markets.</p>
+<p>We have a strong and experienced after sales services team, with average 6 years experiences in the industry, to ensure the best</p>
+<p>service being provided to our customers.</p>
+<div class="read_more"><a href="/about/">READ MORE</a></div>
+</div>
+<div class="index_img1"><a href=""><img src="/templets/efedata/images/com_img.jpg" width="745px" height="550px"></a><a href=""><img src="/templets/efedata/images/unkonw_img.jpg" width="420px" height="550px" style="float: right;"></a></div>
+</div>
+</div>
+<div class="clear"></div>
+<!--首页第二部分-->
+<div class="border2_styl"></div>
+<div class="clear"></div>
+<div class="bar_posi">
+<div class="public_bar">Latest collection</div>
+</div>
+ <!-- chanpin area-->
+<div class="index_box_area">
+<div class="index_box1">
+<div class="pro_LL">
+<div class="sing_border"><a href="">Acetate</a></div>
+<div class="pro_l_img"><img src="http://holland.efe.com.cn/templets/efedata/images/home_22.jpg" width="220" height="388"></div>
+<div class="pro_r_box">
+<div><a href="/acetate/female/10.html"><img src="http://holland.efe.com.cn/templets/efedata/images/61002c1.jpg"></a><span class="txt_posi1"><a href="/acetate/female/10.html">61002</a></span></div>
+<div class="pro_fgx"> </div>
+<div><a href="/acetate/female/11.html"><img src="http://holland.efe.com.cn/templets/efedata/images/62001c1.jpg"></a><span class="txt_posi2"><a href="/acetate/female/11.html">62001</a></span></div>
+</div>
+</div>
+</div>
+<div class="index_box2">
+<div class="pro_CC">
+<div class="sing_border"><a href="">Titanium</a></div>
+<div class="pro_r_box2">
+<div><a href="/titanium/male/12.html"><img src="http://holland.efe.com.cn/templets/efedata/images/8500c1.jpg"></a><span class="txt_posi3"><a href="/titanium/male/12.html">8500</a></span></div>
+<div><a href="/titanium/male/13.html"><img src="http://holland.efe.com.cn/templets/efedata/images/9106c1.jpg"></a><span class="txt_posi4"><a href="/titanium/male/13.html">9106</a></span></div>
+</div>
+<div class="pro_2_img"><img src="http://holland.efe.com.cn/templets/efedata/images/home_33.jpg" width="365" height="224"></div>
+</div>
+</div>
+<div class="index_box3">
+<div class="pro_RR">
+<div class="sing_border"><a href="">TR90</a></div>
+<div class="pro_l_img"><img src="http://holland.efe.com.cn/templets/efedata/images/home_44.jpg" width="220" height="388"></div>
+<div class="pro_r_box3">
+<div><a href="/tr90/female/14.html"><img src="http://holland.efe.com.cn/templets/efedata/images/82022c1.jpg"></a><span class="txt_posi1"><a href="/tr90/female/14.html">82022</a></span></div>
+<div class="pro_fgx"> </div>
+<div><a href="/tr90/unisex/15.html"><img src="http://holland.efe.com.cn/templets/efedata/images/82023c1.jpg"></a><span class="txt_posi2"><a href="/tr90/unisex/15.html">82023</a></span></div>
+</div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<!--首页第三部分-->
+<div class="index_bg06">
+<div class="index_con">
+<div class="our_stre">Our strength</div>
+<div class="our_stre_bor"></div>
+<div class="index_text2">
+<p><em>W</em>e are a direct supplier and producer of wholesales optical, sunglasses and reading glasses, We also carry quality discount</p>
+<p>eyewear for retailers who want to sell optical, sunglasses and reading glasses for profit.</p>
+<p>With wide range of collections in different materials, like acetate, TR90, titanium, monel, stainless steel, aluminum. Of course also</p>
+<p>the good combination with different materials, like acetate with monel temples, TR90 mixed with titanium or monel, stainless steel</p>
+<p>with TR90 temples, etc.</p>
+<p>You can easily select the need frames for your customers from EFE collections, from regular optical frames in bulk to wholesale</p>
+<p>designer frames.  We also carry lots of sport sunglasses for the active lifestyles, as well as the high fashion types who want to</p>
+<p>have the stylish look.</p>
+  <div class="our_txt_bor"></div>
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<!--首页第四部分-->
+<div class="border1_styl"></div>
+<div class="clear"></div>
+<div class="bar_posi">
+<div class="public_bar">Profit Marking Collections</div>
+<div class="index2_text3">
+<p><em>A</em>s former retailer, we understand the importance of having a product line that retailers can trust. Consumers need to feel confident that</p>
+<p>they are purchasing eyewear is of good quality for a very good price. Not only will you find top quality styles in our inventory, but you will</p>
+<p>also see the hottest trends in what people are wearing.</p>
+<p>All of this, and you will find our pricing to be very competitive, especially with the volume discount pricing.  Take a look at our vast</p>
+<p>selection of styles and see why more and more retailers are turning to our product line to carry in their stores.</p>
+</div>
+<div class="last_border"></div>
+</div>
+</div>
+<div class="clear"></div>
+<div class="clear"></div>
+<!-- //底部模板 -->
+<div class="clear"></div>
+<div class="footer_bar">
+<div class="footer_auto"><div class="footer_bar_L"><a>© 2005-2015 Shanghai EFE eyewear Corp.Ltd</a></div>
+<div class="footer_bar_R">
+<ul>
+<li><a href="/">HOME</a></li>
+<li><a href="/allpro/">COLLECTION</a></li>
+<li><a href="/news/">NEWS</a></li>
+<li><a href="/member/shops_orders.php">MY OUDER</a></li>
+<li><a href="/about/">ABOUT US</a></li>
+<li><a href="/contact/">CONTACT US</a></li>
+<li><a href="#gotop">TOP↑</a></li>
+ </ul>
+</div>
+</div></div>
+
+</body>
+</html>
